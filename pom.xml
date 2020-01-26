@@ -31,6 +31,13 @@
 					</goals>
 				</execution>
 				<execution>
+					<id>default-report</id>
+					<goals>
+						<goal>report</goal>
+					</goals>
+				</execution>
+				
+				<execution>
 					<id>check</id>
 					<goals>
 						<goal>check</goal>
@@ -43,7 +50,7 @@
 									<limit>
 										<counter>LINE</counter>
 										<value>COVEREDRATIO</value>
-										<minimum>0.90</minimum>
+										<minimum>0.50</minimum>
 									</limit>
 								</limits>
 								<excludes>
@@ -51,6 +58,7 @@
 								</excludes>
 							</rule>
 						</rules>
+						<outputDirectory>target/my-reports</outputDirectory>
 					</configuration>
 				</execution>
 			</executions>
